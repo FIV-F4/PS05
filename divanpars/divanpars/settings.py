@@ -12,6 +12,10 @@ BOT_NAME = "divanpars"
 SPIDER_MODULES = ["divanpars.spiders"]
 NEWSPIDER_MODULE = "divanpars.spiders"
 
+ITEM_PIPELINES = {
+    'divanpars.pipelines.CsvWriterPipeline': 300,
+}
+
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "divanpars (+http://www.yourdomain.com)"
